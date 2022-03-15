@@ -3,15 +3,21 @@ import * as S from "./styled";
 import { LogoKabum } from "../../assets/images/LogoKabum";
 import Search from "./Search";
 import UserInfo from "./UserInfo";
+import AdditionalInfo from "./AdditionalInfo";
 
 export default function Header() {
   return (
-    <S.StyledHeader>
-      <LogoKabum />
-      <div>
-        <Search />
-      </div>
-      <UserInfo />
-    </S.StyledHeader>
+    <S.Main>
+      <S.StyledHeader>
+        <S.Logo>
+          <LogoKabum />
+        </S.Logo>
+        <S.SearchDiv>
+          <Search />
+        </S.SearchDiv>
+        <UserInfo />
+        <AdditionalInfo />
+      </S.StyledHeader>
+    </S.Main>
   );
 }
