@@ -15,8 +15,6 @@ export const Container = styled.div`
   justify-content: center;
   align-item: flex-start;
   color: ${corTexto};
-  margin-left: 0px;
-  width: 600px;
 `;
 
 export const Login = styled.a`
@@ -27,16 +25,4 @@ export const Login = styled.a`
 export const Cadastro = styled.a`
   font-weight: bold;
   color: ${corTexto};
-`;
-
-export const Sac = styled.a`
-  margin-left: 150px;
-`;
-
-export const Favorite = styled.a`
-  margin-left: 25px;
-`;
-
-export const Cart = styled.a`
-  margin-left: 25px;
 `;

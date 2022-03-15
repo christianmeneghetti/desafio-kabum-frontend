@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Input = styled.input`
-  width: 530.12px;
+  width: 100%;
   height: 35.99px;
   border-radius: 1rem 25px 100px 1rem;
   border-color: transparent;
@@ -18,6 +18,6 @@ export const Logo = styled.button`
   z-index: 2;
   margin-left: -38px;
   border: none;
-  top: 32px;
+  top: -6px;
   position: absolute;
 `;
