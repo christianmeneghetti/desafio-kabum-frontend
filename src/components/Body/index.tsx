@@ -1,7 +1,8 @@
 import React from "react";
 import Banner from "./Banner";
+import ContentBot from "./ContentBot";
 import ContentTop from "./ContentTop";
-import ContetBot from "./ContetBot";
+import ContentMid from "./ContetMid";
 import * as S from "./styled";
 
 export default function Body() {
@@ -9,12 +10,13 @@ export default function Body() {
     <S.MainBody>
       <S.StyledBody>
         <Banner />
-        <S.SectionContent>
-          <S.StyledContent>
+        <S.ArticleContent>
+          <S.SectionContent>
             <ContentTop />
-            <ContetBot />
-          </S.StyledContent>
-        </S.SectionContent>
+            <ContentMid />
+            <ContentBot />
+          </S.SectionContent>
+        </S.ArticleContent>
       </S.StyledBody>
     </S.MainBody>
   );

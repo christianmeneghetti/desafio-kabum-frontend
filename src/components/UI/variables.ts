@@ -6,3 +6,4 @@ export const clrKabumWht = "#FAFAFB";
 export const clrTitleOffer = "#42464D";
 export const clrManufactor = "#7F858D";
 export const clrOfferTxt = "#565C69";
+export const clrBannerBorder = "#F2F3F4";
