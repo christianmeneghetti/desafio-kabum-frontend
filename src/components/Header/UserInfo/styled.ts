@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { corTexto } from "../../UI/variables";
+import { clrText } from "../../UI/variables";
 
 export const User = styled.div`
   display: flex;
   flex-direction: row;
-  color: ${corTexto};
+  color: ${clrText};
   width: 10.375rem;
   margin-left: 8px;
 `;
@@ -14,15 +14,15 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   align-item: flex-start;
-  color: ${corTexto};
+  color: ${clrText};
 `;
 
 export const Login = styled.a`
   font-weight: bold;
-  color: ${corTexto};
+  color: ${clrText};
 `;
 
 export const Cadastro = styled.a`
   font-weight: bold;
-  color: ${corTexto};
+  color: ${clrText};
 `;
