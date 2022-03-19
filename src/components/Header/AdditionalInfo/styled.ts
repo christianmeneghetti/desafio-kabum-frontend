@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { clrText } from "../../UI/variables";
+import { clrWht } from "../../UI/variables";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-item: flex-start;
-  color: ${clrText};
+  color: ${clrWht};
   margin-left: 0px;
 `;
 
