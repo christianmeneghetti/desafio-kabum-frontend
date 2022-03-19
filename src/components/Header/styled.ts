@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { corPrimaria } from "../UI/variables";
+import { clrPrimary } from "../UI/variables";
 
-export const Main = styled.div`
+export const Main = styled.header`
   position: relative;
   width: 100%;
   padding: 0 1.5rem;
-  background-color: ${corPrimaria};
+  background-color: ${clrPrimary};
 `;
 
 export const StyledHeader = styled.nav`
@@ -26,6 +26,6 @@ export const SearchDiv = styled.div`
   position: relative;
   width: 100%;
   padding: 0 1.5rem;
-  background-color: ${corPrimaria};
+  background-color: ${clrPrimary};
   margin-right: 24px;
 `;

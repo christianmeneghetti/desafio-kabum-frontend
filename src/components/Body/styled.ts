@@ -1,16 +1,17 @@
 import styled from "styled-components";
+import { clrBackground, clrKabumWht } from "../UI/variables";
 
-export const SyledBody = styled.main`
+export const MainBody = styled.main`
   display: flex;
-  background-color: #002047;
+  background-color: ${clrBackground};
   justify-content: center;
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 100vh;
 `;
 
-export const Main = styled.div`
-  display: flex-start;
+export const StyledBody = styled.div`
+  display: flex;
   flex: 1 1 0%;
   flex-direction: column;
   max-width: 1440px;
@@ -20,3 +21,14 @@ export const Main = styled.div`
   justify-content: center;
   overflow-x: hidden;
 `;
+
+export const SectionContent = styled.article`
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  max-width: 1360px;
+  background-color: ${clrKabumWht};
+  overflow-x: hidden;
+`;
+
+export const StyledContent = styled.section``;

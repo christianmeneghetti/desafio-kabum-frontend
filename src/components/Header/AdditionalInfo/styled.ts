@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { corTexto } from "../../UI/variables";
+import { clrText } from "../../UI/variables";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-item: flex-start;
-  color: ${corTexto};
+  color: ${clrText};
   margin-left: 0px;
 `;
 
