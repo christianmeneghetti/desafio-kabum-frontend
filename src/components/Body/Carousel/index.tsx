@@ -45,13 +45,14 @@ function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
   );
 }
 
-export default class CustomArrows extends Component {
+export default class Carousel extends Component {
   render() {
     const settings = {
       dots: false,
       infinite: true,
       slidesToShow: 5,
       slidesToScroll: 1,
+      centerMode: true,
       nextArrow: (
         <SampleNextArrow
           className={undefined}
