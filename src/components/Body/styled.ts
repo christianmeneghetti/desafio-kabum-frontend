@@ -22,7 +22,8 @@ export const StyledBody = styled.div`
   overflow-x: hidden;
 `;
 
-export const SectionContent = styled.article`
+export const ArticleContent = styled.article`
+  margin: 0px 0px 21rem 0px;
   display: flex;
   flex: 1 1 0%;
   flex-direction: column;
@@ -31,4 +32,4 @@ export const SectionContent = styled.article`
   overflow-x: hidden;
 `;
 
-export const StyledContent = styled.section``;
+export const SectionContent = styled.section``;

@@ -6,8 +6,8 @@ export default function Banner() {
   return (
     <S.BannerLink href="google.com" target="_self">
       <S.Imagem
-        src="/BannerTopo.jpg"
-        alt="BannerTopo"
+        src="/BannerTop.jpg"
+        alt="BannerTop"
         width="1440"
         height="600"
       />

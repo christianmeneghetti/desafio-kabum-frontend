@@ -13,7 +13,8 @@ export default function UserInfo() {
         <span>
           Faça
           <S.Login href="facebook.com"> Login </S.Login>
-          <br /> ou crie seu
+          ou
+          <br /> crie seu
           <S.Cadastro href="facebook.com"> Cadastro </S.Cadastro>
         </span>
       </S.User>
