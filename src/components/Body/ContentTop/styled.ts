@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { clrKabum, clrText } from "../../UI/variables";
+import { clrKabum, clrWht } from "../../UI/variables";
 
 export const Offers = styled.div`
   width: 100%;
@@ -27,7 +27,7 @@ export const H1Black = styled.h1`
   line-height: 2rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: ${clrText};
+  color: ${clrWht};
 `;
 
 export const OfferPromo = styled.div`
@@ -43,7 +43,7 @@ export const OfferText = styled.div`
   display: flex;
   -webkit-box-align: center;
   align-items: center;
-  color: ${clrText};
+  color: ${clrWht};
   margin-right: 0.5rem;
 `;
 
@@ -60,6 +60,6 @@ export const SpanCountdown = styled.span`
   font-size: 24px;
   font-weight: 700;
   line-height: 1rem;
-  color: ${clrText};
+  color: ${clrWht};
   text-transform: uppercase;
 `;
