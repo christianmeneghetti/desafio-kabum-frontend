@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react-slick": "^0.23.8",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native-svg": "^12.3.0",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
