@@ -10,7 +10,9 @@ export default function Header() {
     <S.Main>
       <S.StyledHeader>
         <S.Logo>
-          <LogoKabum />
+          <S.ALogo href="/">
+            <LogoKabum />
+          </S.ALogo>
         </S.Logo>
         <S.SearchDiv>
           <Search />

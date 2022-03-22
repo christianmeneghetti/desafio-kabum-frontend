@@ -22,6 +22,11 @@ export const Logo = styled.div`
   display: flex;
 `;
 
+export const ALogo = styled.a`
+  height: 3.375rem;
+  cursor: pointer;
+`;
+
 export const SearchDiv = styled.div`
   position: relative;
   width: 100%;
