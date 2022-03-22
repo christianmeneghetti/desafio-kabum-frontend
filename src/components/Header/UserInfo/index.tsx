@@ -12,10 +12,10 @@ export default function UserInfo() {
       <S.User>
         <span>
           Faça
-          <S.Login href="facebook.com"> Login </S.Login>
+          <S.Login href="/auth/LoginPage"> Login </S.Login>
           ou
           <br /> crie seu
-          <S.Cadastro href="facebook.com"> Cadastro </S.Cadastro>
+          <S.Cadastro href="/auth/LoginPage"> Cadastro </S.Cadastro>
         </span>
       </S.User>
     </S.Container>
