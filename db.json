@@ -1,0 +1,64 @@
+{
+  "offers": [
+    {
+      "id": "1",
+      "title": "Placa-mãe Gigabyte Aorus B450 Aorus M, AMD AM4, mATX, DDR4",
+      "img": "https://imgur.com/8apg9z5.jpg",
+      "priceOf": "R$ 380,99",
+      "pricePer": "R$ 280,90",
+      "manufacturer": "Gigabyte",
+      "freeFreight": true,
+      "openbox": true
+    },
+    {
+      "id": "2",
+      "title": "Processador AMD Ryzen 7 3800X Cache 32MB 3.9GHz 4.5GHz Max",
+      "img": "https://imgur.com/I4RDhqj.jpg",
+      "priceOf": "R$ 380,99",
+      "pricePer": "R$ 280,90",
+      "manufacturer": "AMD",
+      "freeFreight": false,
+      "openbox": false
+    },
+    {
+      "id": "3",
+      "title": "Memória HyperX Fury, 8GB, 2400MHz, DDR4, CL15, Preto...",
+      "img": "https://imgur.com/OB6HAFL.jpg",
+      "priceOf": "R$ 380,99",
+      "pricePer": "R$ 280,90",
+      "manufacturer": "HyperX",
+      "freeFreight": true,
+      "openbox": true
+    },
+    {
+      "id": "4",
+      "title": "Headset Gamer HyperX Cloud Stinger - HX-HSCS-BK/NA",
+      "img": "https://imgur.com/yg6koqZ.jpg",
+      "priceOf": "R$ 380,99",
+      "pricePer": "R$ 280,90",
+      "manufacturer": "HyperX",
+      "freeFreight": false,
+      "openbox": false
+    },
+    {
+      "id": "5",
+      "title": "Amazon Smart Home Echo Dot Alexa, 3ª Geração, Preto",
+      "img": "https://imgur.com/yenuYHb.jpg",
+      "priceOf": "R$ 380,99",
+      "pricePer": "R$ 280,90",
+      "manufacturer": "Amazon",
+      "freeFreight": true,
+      "openbox": true
+    },
+    {
+      "id": "6",
+      "title": "Smart TV LG 55 4K UHD, WiFi, Bluetooth, HDR, Inteligência Artificial, ThinQ, Smart Magic, Google Alexa - 55UP7750PSB",
+      "img": "https://imgur.com/eQsPtyg.jpg",
+      "priceOf": "R$ 380,99",
+      "pricePer": "R$ 280,90",
+      "manufacturer": "LG",
+      "freeFreight": false,
+      "openbox": true
+    }
+  ]
+}

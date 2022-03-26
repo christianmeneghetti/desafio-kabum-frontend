@@ -8,13 +8,13 @@ import {
 } from "../../UI/variables";
 
 export const Offer = styled.div`
+  margin: 2rem 1rem 1rem;
+  display: flex !important;
+  width: 214px !important;
   outline: none;
 `;
 
 export const OfferCard = styled.div`
-  margin: 2rem 1rem 1rem;
-  display: flex !important;
-  width: 214px !important;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -50,6 +50,7 @@ export const OfferLink = styled.a`
 export const OfferImg = styled.img`
   height: 8.25rem;
   width: auto;
+  object-fit: contain;
 `;
 
 export const OfferContentTop = styled.div`
@@ -107,6 +108,11 @@ export const OfferTitle = styled.h2`
   line-height: 1.125rem;
   font-weight: bold;
   margin-top: 0.5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 3.375rem;
   color: ${clrTitleOffer};
 `;
 
@@ -117,7 +123,7 @@ export const OfferDivPrice = styled.div`
   padding: 0.5rem 1rem;
 `;
 
-export const OfferPriceFrom = styled.span`
+export const OfferPriceOf = styled.span`
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 400;
@@ -126,7 +132,7 @@ export const OfferPriceFrom = styled.span`
   text-decoration: line-through;
 `;
 
-export const OfferPriceBy = styled.span`
+export const OfferPricePer = styled.span`
   font-size: 1.5rem;
   line-height: 2.125rem;
   font-weight: 700;
