@@ -13,7 +13,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-item: flex-start;
+  align-items: center;
   color: ${clrWht};
 `;
 

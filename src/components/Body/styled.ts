@@ -20,6 +20,10 @@ export const StyledBody = styled.div`
   -webkit-box-pack: center;
   justify-content: center;
   overflow-x: hidden;
+
+  @media (max-width: 1440px) {
+    padding: 0px 1rem;
+  }
 `;
 
 export const ArticleContent = styled.article`
@@ -30,6 +34,11 @@ export const ArticleContent = styled.article`
   max-width: 1360px;
   background-color: ${clrKabumWht};
   overflow-x: hidden;
+
+  @media (max-width: 1400px) {
+    margin: 0px auto;
+    width: 100%;
+  }
 `;
 
 export const SectionContent = styled.section``;
