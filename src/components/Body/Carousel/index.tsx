@@ -12,7 +12,8 @@ import { TruckFill } from "../../../assets/images/TruckFill";
 import { OpenBox } from "../../../assets/images/OpenBox";
 import { IconCartWht } from "../../../assets/images/IconCartWht";
 import axios from "axios";
-import { off } from "process";
+import { emit, off } from "process";
+import SwitcherFavorite from "../SwitcherFavorite";
 
 function SampleNextArrow(props: { className: any; style: any; onClick: any }) {
   const { className, style, onClick } = props;
@@ -48,14 +49,9 @@ function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
   );
 }
 
-export default function Carousel() {
-  const [offers, setOffers] = useState<any[]>([]);
-
-  useEffect(() => {
-    axios.get("http://localhost:5000/offers").then((response) => {
-      setOffers(response.data);
-    });
-  }, []);
+export default function Carousel(props: any) {
+  const { offers } = props;
+  const { favorite, onAddFavorite, onAddCart } = props;
 
   const settings = {
     dots: false,
@@ -114,7 +110,7 @@ export default function Carousel() {
   return (
     <>
       <Slider {...settings}>
-        {offers.map((offer, index) => {
+        {offers.ofertas.map((offer: any, index: any) => {
           return (
             <S.Offer key={index}>
               <>
@@ -122,8 +118,12 @@ export default function Carousel() {
                   <S.OfferCardTop>
                     <S.OfferContentTop>
                       <S.OfferFavorite>
-                        <S.OfferFavoriteButton>
-                          <IconFavoriteOffer />
+                        <S.OfferFavoriteButton
+                          onClick={() => onAddFavorite(offer.id)}
+                        >
+                          <SwitcherFavorite
+                            favorite={favorite.includes(offer.id)}
+                          />
                         </S.OfferFavoriteButton>
                       </S.OfferFavorite>
                       <S.OfferStars>
@@ -177,7 +177,7 @@ export default function Carousel() {
                   </S.OfferLink>
                   <S.OfferDivBuy>
                     <S.OfferBuy>
-                      <S.OfferBuyButton>
+                      <S.OfferBuyButton onClick={() => onAddCart(offer.id)}>
                         <IconCartWht />
                         <S.OfferSpanBuy>COMPRAR</S.OfferSpanBuy>
                       </S.OfferBuyButton>

@@ -237,6 +237,9 @@ export const OfferBuyButton = styled.button`
   cursor: pointer;
   background: ${clrKabum};
   border: none;
+  &:hover {
+    background: linear-gradient(rgb(255, 101, 0) 0%, rgba(247, 129, 52) 100%);
+  }
 `;
 
 export const OfferSpanBuy = styled.span`
