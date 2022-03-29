@@ -8,3 +8,5 @@ export const clrTitleOffer = "#42464D";
 export const clrManufactor = "#7F858D";
 export const clrOfferTxt = "#565C69";
 export const clrBannerBorder = "#F2F3F4";
+export const clrBoxShadow = "rgba(38, 38, 38, 0.2)";
+export const clrHoverButton = "rgba(247, 129, 52)";
