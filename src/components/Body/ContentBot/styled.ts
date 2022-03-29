@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { clrBannerBorder, clrOfferTxt, clrWht } from "../../UI/variables";
+import {
+  clrBannerBorder,
+  clrBoxShadow,
+  clrOfferTxt,
+  clrWht,
+} from "../../UI/variables";
 
 export const BannerDiv = styled.div`
   margin-top: 32px;
@@ -18,6 +23,10 @@ export const BannerBot = styled.div`
   width: 100%;
   margin: 0px 1.5rem 0px 0px;
   border: 0.663366px solid ${clrBannerBorder};
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px ${clrBoxShadow};
+  }
 `;
 
 export const BannerDivText = styled.div`
