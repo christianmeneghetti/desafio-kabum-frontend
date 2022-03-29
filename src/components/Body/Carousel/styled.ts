@@ -5,6 +5,8 @@ import {
   clrManufactor,
   clrOfferTxt,
   clrTitleOffer,
+  clrBoxShadow,
+  clrHoverButton,
 } from "../../UI/variables";
 
 export const Offer = styled.div`
@@ -25,6 +27,10 @@ export const OfferCard = styled.div`
   background: ${clrWht};
   border-radius: 0.25rem;
   transition: box-shadow 200ms ease 0s;
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px ${clrBoxShadow};
+  }
 `;
 
 export const OfferCardTop = styled.div`
@@ -238,7 +244,7 @@ export const OfferBuyButton = styled.button`
   background: ${clrKabum};
   border: none;
   &:hover {
-    background: linear-gradient(rgb(255, 101, 0) 0%, rgba(247, 129, 52) 100%);
+    background: linear-gradient(${clrKabum} 0%, ${clrHoverButton} 100%);
   }
 `;
 
