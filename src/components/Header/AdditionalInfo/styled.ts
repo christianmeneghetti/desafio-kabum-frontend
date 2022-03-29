@@ -1,13 +1,20 @@
 import styled from "styled-components";
-import { clrWht } from "../../UI/variables";
+import { clrKabumRed, clrKabumWht, clrWht } from "../../UI/variables";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-item: flex-start;
+  align-items: center;
   color: ${clrWht};
   margin-left: 0px;
+`;
+
+export const InternalDiv = styled.div`
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
 `;
 
 export const Sac = styled.a`
@@ -20,4 +27,25 @@ export const Favorite = styled.a`
 
 export const Cart = styled.a`
   margin-left: 25px;
+`;
+
+export const Cont = styled.span`
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transform: translate(70%, -70%);
+  transform-origin: 100% 0%;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 10px;
+  padding: 0px 6px;
+  background: ${clrKabumRed};
+  color: ${clrKabumWht};
+  font-size: 0.75rem;
+  font-weight: bold;
 `;

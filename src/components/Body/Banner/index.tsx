@@ -4,7 +4,7 @@ import { BannerImg } from "../../../assets/images/BannerImg";
 
 export default function Banner() {
   return (
-    <S.BannerLink href="google.com" target="_self">
+    <S.BannerLink href="#" target="_self">
       <S.Imagem
         src="/BannerTop.jpg"
         alt="BannerTop"

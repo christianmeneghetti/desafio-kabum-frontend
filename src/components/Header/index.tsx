@@ -5,7 +5,9 @@ import Search from "./Search";
 import UserInfo from "./UserInfo";
 import AdditionalInfo from "./AdditionalInfo";
 
-export default function Header() {
+export default function Header(props: any) {
+  const { favoriteCount } = props;
+  const { cartCount } = props;
   return (
     <S.Main>
       <S.StyledHeader>
@@ -18,7 +20,7 @@ export default function Header() {
           <Search />
         </S.SearchDiv>
         <UserInfo />
-        <AdditionalInfo />
+        <AdditionalInfo favoriteCount={favoriteCount} cartCount={cartCount} />
       </S.StyledHeader>
     </S.Main>
   );

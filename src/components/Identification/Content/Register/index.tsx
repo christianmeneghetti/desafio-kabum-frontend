@@ -49,7 +49,7 @@ export default function Register() {
         </S.DivRegister>
 
         <S.DivButton>
-          <S.Button>
+          <S.Button type="submit">
             <S.DivSvg>
               <IconRegister />
             </S.DivSvg>
