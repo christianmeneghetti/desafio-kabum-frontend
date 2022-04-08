@@ -1,23 +1,44 @@
 import React from "react";
-import { IconCart } from "../../../assets/images/IconCart";
-import { IconFavorite } from "../../../assets/images/IconFavorite";
-import { IconSac } from "../../../assets/images/IconSac";
+import { IconLogged } from "../../../assets/images/IconLogged";
 import { IconUser } from "../../../assets/images/IconUser";
+import { useAuth } from "../../../hooks/useAuth";
 import * as S from "./styled";
 
 export default function UserInfo() {
+  const auth = useAuth();
+
+  const onLogout = () => {
+    auth.logout();
+  };
+
   return (
     <S.Container>
-      <IconUser />
-      <S.User>
-        <span>
-          Faça
-          <S.Login href="/auth/LoginPage"> Login </S.Login>
-          ou
-          <br /> crie seu
-          <S.Cadastro href="/auth/LoginPage"> Cadastro </S.Cadastro>
-        </span>
-      </S.User>
+      {!auth.email ? (
+        <>
+          <IconUser />
+          <S.User>
+            <S.Span>
+              Faça
+              <S.Login href="/LoginPage"> Login </S.Login>
+              ou
+              <br /> crie seu
+              <S.Register href="/LoginPage"> Cadastro </S.Register>
+            </S.Span>
+          </S.User>
+        </>
+      ) : (
+        <>
+          <IconLogged />
+          <S.User>
+            <S.Welcome>Olá, Luis Henrique</S.Welcome>
+            <S.AccountOut>
+              <S.Account href="#">MINHA CONTA</S.Account>
+              <S.SpanPipe> | </S.SpanPipe>
+              <S.Out onClick={onLogout}> SAIR</S.Out>
+            </S.AccountOut>
+          </S.User>
+        </>
+      )}
     </S.Container>
   );
 }

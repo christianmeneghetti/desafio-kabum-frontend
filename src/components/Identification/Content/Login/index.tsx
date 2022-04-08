@@ -1,25 +1,35 @@
 import React, { useState } from "react";
 import { IconEnter } from "../../../../assets/images/IconEnter";
-import { onLogin } from "../../../../auth/auth.api";
+import { useAuth } from "../../../../hooks/useAuth";
 import * as S from "./styled";
+import * as SS from "./../styled";
+import { useRouter } from "next/router";
+import { Error } from "../../../../assets/images/Error";
 
-export default function Login() {
+export default function Login(props: any) {
+  const [errorP, setErrorP] = useState("");
+  const router = useRouter();
   const [{ email, password }, setCredentials] = useState({
     email: "",
     password: "",
   });
 
-  const login = async (event: React.FormEvent) => {
+  const auth = useAuth();
+
+  const onLogin = async (event: React.FormEvent) => {
     event.preventDefault();
-    const response = await onLogin({
-      email,
-      password,
-    });
+    try {
+      await auth.authenticate(email, password);
+      router.push("/");
+    } catch (error) {
+      console.log(error);
+      setErrorP("Senha ou usuário invalido.");
+    }
   };
 
   return (
     <S.Login>
-      <S.FormLogin onSubmit={login}>
+      <S.FormLogin onSubmit={onLogin}>
         <S.FormH2>JÁ TENHO CADASTRO</S.FormH2>
         <S.DivLogin>
           <S.DivCamp>
@@ -58,6 +68,14 @@ export default function Login() {
               </S.DivForm>
             </S.DivInp>
           </S.DivCamp>
+          {errorP ? (
+            <SS.Error>
+              <Error />
+              {errorP}
+            </SS.Error>
+          ) : (
+            ""
+          )}
         </S.DivLogin>
 
         <S.DivButton>
