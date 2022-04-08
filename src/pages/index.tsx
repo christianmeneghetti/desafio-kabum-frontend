@@ -1,8 +1,9 @@
 import axios from "axios";
 import type { NextPage } from "next";
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useState } from "react";
 import Body from "../components/Body";
 import Header from "../components/Header";
+import { AuthProvider } from "../context/AuthProvider";
 
 const Home: NextPage = ({ children }) => {
   const [offers, setOffers] = useState([]);
@@ -31,15 +32,17 @@ const Home: NextPage = ({ children }) => {
   };
 
   return (
-    <>
-      <Header favoriteCount={favorite.length} cartCount={cart.length} />
-      <Body
-        ofertas={offers}
-        favorite={favorite}
-        onAddFavorite={onAddFavorite}
-        onAddCart={onAddCart}
-      />
-    </>
+    <AuthProvider>
+      <>
+        <Header favoriteCount={favorite.length} cartCount={cart.length} />
+        <Body
+          ofertas={offers}
+          favorite={favorite}
+          onAddFavorite={onAddFavorite}
+          onAddCart={onAddCart}
+        />
+      </>
+    </AuthProvider>
   );
 };
 
