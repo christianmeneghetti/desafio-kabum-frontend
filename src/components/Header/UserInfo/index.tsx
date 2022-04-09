@@ -12,7 +12,7 @@ export default function UserInfo() {
   };
 
   return (
-    <S.Container>
+    <S.UserInfo>
       {!auth.email ? (
         <>
           <IconUser />
@@ -39,6 +39,6 @@ export default function UserInfo() {
           </S.User>
         </>
       )}
-    </S.Container>
+    </S.UserInfo>
   );
 }

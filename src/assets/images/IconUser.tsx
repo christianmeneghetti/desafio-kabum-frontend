@@ -1,8 +1,8 @@
 export const IconUser = () => {
   return (
     <svg
-      width="36"
-      height="36"
+      width="44"
+      height="40"
       viewBox="0 0 36 36"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

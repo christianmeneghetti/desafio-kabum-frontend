@@ -4,7 +4,7 @@ import {
   clrKabum,
   clrManufactor,
   clrOfferTxt,
-  clrTitleOffer,
+  clrKabumGrey,
   clrBoxShadow,
   clrHoverButton,
 } from "../../UI/variables";
@@ -54,7 +54,7 @@ export const OfferLink = styled.a`
 `;
 
 export const OfferImg = styled.img`
-  height: 8.25rem;
+  height: 6.25rem;
   width: auto;
   object-fit: contain;
 `;
@@ -119,7 +119,7 @@ export const OfferTitle = styled.h2`
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   height: 3.375rem;
-  color: ${clrTitleOffer};
+  color: ${clrKabumGrey};
 `;
 
 export const OfferDivPrice = styled.div`
@@ -177,7 +177,7 @@ export const OfferTrcuk = styled.div`
 `;
 
 export const OfferFreight = styled.span`
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   line-height: 1.125rem;
   font-weight: 400;
   height: 1.125rem;
@@ -203,7 +203,7 @@ export const OfferBox = styled.div`
 `;
 
 export const OfferOpen = styled.span`
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   line-height: 1.125rem;
   font-weight: 400;
   height: 1.125rem;

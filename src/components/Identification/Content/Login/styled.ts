@@ -49,7 +49,6 @@ export const Input = styled.input`
   width: 100%;
   background: none;
   padding: 0.6875rem 1rem;
-  font-family: '"Poppins",sans-serif';
   color: ${clrOfferTxt};
   font-size: 0.875rem;
   :focus ~ label,

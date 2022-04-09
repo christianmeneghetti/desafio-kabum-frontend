@@ -1,7 +1,7 @@
 export const IconLogged = () => {
   return (
     <svg
-      width="36"
+      width="44"
       height="36"
       viewBox="0 0 36 36"
       fill="none"
@@ -18,6 +18,7 @@ export const IconLogged = () => {
       />
       <mask
         id="mask0_998_406"
+        mask-type="alpha"
         maskUnits="userSpaceOnUse"
         x="2"
         y="2"

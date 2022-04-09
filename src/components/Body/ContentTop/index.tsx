@@ -1,8 +1,17 @@
 import React from "react";
+import Countdown from "react-countdown";
+import { deflateSync } from "zlib";
 import { LogoUnion } from "../../../assets/images/LogoUnion";
 import * as S from "./styled";
 
 export default function ContentTop() {
+  const renderer = ({ days, hours, minutes, seconds }: any) => {
+    return (
+      <span>
+        {days}D {hours}:{minutes}:{seconds}
+      </span>
+    );
+  };
   return (
     <S.Offers>
       <S.OffersTop>
@@ -13,7 +22,9 @@ export default function ContentTop() {
           <S.OfferText>A PROMOÇÃO TERMINA EM:</S.OfferText>
           <S.OfferDisplay>
             <LogoUnion />
-            <S.SpanCountdown>13D 18:15:56</S.SpanCountdown>
+            <S.SpanCountdown>
+              <Countdown date={Date.now() + 1000000000} renderer={renderer} />
+            </S.SpanCountdown>
           </S.OfferDisplay>
         </S.OfferPromo>
       </S.OffersTop>

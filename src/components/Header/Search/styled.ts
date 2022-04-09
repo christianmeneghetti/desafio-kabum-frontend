@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Search = styled.div`
+  position: relative;
+`;
+
 export const Input = styled.input`
   width: 100%;
   height: 35.99px;
@@ -16,7 +20,7 @@ export const Input = styled.input`
 
 export const Logo = styled.button`
   background-color: transparent;
-  cursor: point;
+  cursor: pointer;
   border-color: trasnparent;
   z-index: 2;
   margin-left: -38px;
