@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { clrKabumRed, clrKabumWht, clrWht } from "../../UI/variables";
 
-export const Container = styled.div`
+export const AdditionalInfo = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;

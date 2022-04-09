@@ -33,7 +33,7 @@ export const H1Black = styled.h1`
 export const OfferPromo = styled.div`
   display: flex;
   -webkit-box-align: center;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 export const OfferText = styled.div`
@@ -56,6 +56,7 @@ export const OfferDisplay = styled.div`
 `;
 
 export const SpanCountdown = styled.span`
+  margin-left: 5px;
   min-width: 154px;
   font-size: 24px;
   font-weight: 700;

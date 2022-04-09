@@ -6,14 +6,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { ForwardArrow } from "../../../assets/images/ForwardArrow";
 import { BackArrow } from "../../../assets/images/BackArrow";
 import * as S from "./styled";
-import { IconFavoriteOffer } from "../../../assets/images/IconFavoriteOffer";
 import { Rating } from "../../../assets/images/Rating";
 import { TruckFill } from "../../../assets/images/TruckFill";
 import { OpenBox } from "../../../assets/images/OpenBox";
 import { IconCartWht } from "../../../assets/images/IconCartWht";
-import axios from "axios";
-import { emit, off } from "process";
 import SwitcherFavorite from "../SwitcherFavorite";
+import { useAuth } from "../../../hooks/useAuth";
 
 function SampleNextArrow(props: { className: any; style: any; onClick: any }) {
   const { className, style, onClick } = props;
@@ -52,6 +50,7 @@ function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
 export default function Carousel(props: any) {
   const { offers } = props;
   const { favorite, onAddFavorite, onAddCart } = props;
+  const auth = useAuth();
 
   const settings = {
     dots: false,

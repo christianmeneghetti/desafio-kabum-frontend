@@ -8,7 +8,7 @@ export default function AdditionalInfo(props: any) {
   const { favoriteCount } = props;
   const { cartCount } = props;
   return (
-    <S.Container>
+    <S.AdditionalInfo>
       <S.Sac>
         <S.InternalDiv>
           <IconSac />
@@ -28,6 +28,6 @@ export default function AdditionalInfo(props: any) {
           {cartCount > 0 ? <S.Cont>{cartCount}</S.Cont> : ""}
         </S.InternalDiv>
       </S.Cart>
-    </S.Container>
+    </S.AdditionalInfo>
   );
 }
