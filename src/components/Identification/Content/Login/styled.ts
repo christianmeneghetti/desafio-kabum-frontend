@@ -51,6 +51,7 @@ export const Input = styled.input`
   padding: 0.6875rem 1rem;
   color: ${clrOfferTxt};
   font-size: 0.875rem;
+  ${(props) => props.theme};
   :focus ~ label,
   :not([value=""]) ~ label {
     top: 0px;
@@ -76,6 +77,7 @@ export const Label = styled.label`
   color: ${clrManufactor};
   font-size: 0.875rem;
   line-height: 1rem;
+  ${(props) => props.theme};
 `;
 
 export const DivButton = styled.div`

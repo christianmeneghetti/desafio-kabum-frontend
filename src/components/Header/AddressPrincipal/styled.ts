@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { clrKabumGrey, clrWht } from "../../UI/variables";
+import { clrKabumGray, clrKabumWht, clrWht } from "../../UI/variables";
 
 export const AdressPrincipal = styled.div`
   display: flex;
@@ -20,7 +20,7 @@ export const AdressIDiv = styled.div`
 
 export const AddressOpt = styled.div`
   position: absolute;
-  display: none;
+  display: flex;
   flex-direction: column;
   max-height: 10.5rem;
   overflow: auto;
@@ -60,7 +60,11 @@ export const OptionialAddress = styled.span`
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
-  color: ${clrKabumGrey};
+  color: ${clrKabumGray};
   background: ${clrWht};
   padding: 8px;
+  cursor: pointer;
+  &:hover {
+    background: ${clrKabumWht};
+  }
 `;

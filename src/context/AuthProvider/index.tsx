@@ -4,6 +4,7 @@ import {
   getUserLocalStorage,
   LoginRequest,
   RegisterRequest,
+  setFavoriteSessionStorage,
   setUserLocalStorage,
 } from "./util";
 
@@ -40,6 +41,7 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
   function logout() {
     setUser(null);
     setUserLocalStorage(null);
+    setFavoriteSessionStorage();
   }
 
   return (

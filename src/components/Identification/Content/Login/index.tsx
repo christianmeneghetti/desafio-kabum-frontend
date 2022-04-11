@@ -36,6 +36,7 @@ export default function Login(props: any) {
             <S.DivInp>
               <S.DivForm>
                 <S.Input
+                  theme={errorP ? "border-color: red;" : ""}
                   type="text"
                   id="inputUserEmail"
                   value={email}
@@ -46,7 +47,12 @@ export default function Login(props: any) {
                     })
                   }
                 ></S.Input>
-                <S.Label htmlFor="inputUserEmail">E-mail</S.Label>
+                <S.Label
+                  theme={errorP ? "color: red;" : ""}
+                  htmlFor="inputUserEmail"
+                >
+                  E-mail
+                </S.Label>
               </S.DivForm>
             </S.DivInp>
           </S.DivCamp>
@@ -54,6 +60,7 @@ export default function Login(props: any) {
             <S.DivInp>
               <S.DivForm>
                 <S.Input
+                  theme={errorP ? "border-color: red;" : ""}
                   type="password"
                   id="inputUserPassword"
                   value={password}
@@ -64,7 +71,12 @@ export default function Login(props: any) {
                     })
                   }
                 ></S.Input>
-                <S.Label htmlFor="inputUserPassword">Senha</S.Label>
+                <S.Label
+                  theme={errorP ? "color: red;" : ""}
+                  htmlFor="inputUserPassword"
+                >
+                  Senha
+                </S.Label>
               </S.DivForm>
             </S.DivInp>
           </S.DivCamp>

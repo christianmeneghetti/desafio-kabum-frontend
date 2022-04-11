@@ -43,7 +43,7 @@ export const SearchDiv = styled.div`
   padding: 0 1.5rem;
   background-color: ${clrPrimary};
   margin-right: 24px;
-  margin-top: 1.7rem;
+  ${(props) => props.theme};
   @media (max-width: 1280px) {
     width: 40vw;
   }

@@ -4,7 +4,7 @@ import {
   clrKabum,
   clrManufactor,
   clrOfferTxt,
-  clrKabumGrey,
+  clrKabumGray,
   clrBoxShadow,
   clrHoverButton,
 } from "../../UI/variables";
@@ -119,7 +119,7 @@ export const OfferTitle = styled.h2`
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   height: 3.375rem;
-  color: ${clrKabumGrey};
+  color: ${clrKabumGray};
 `;
 
 export const OfferDivPrice = styled.div`
@@ -165,6 +165,7 @@ export const OfferDivFreight = styled.div`
   right: 0.5rem;
   display: flex;
   align-items: center;
+  margin-right: 1rem;
 `;
 
 export const OfferTrcuk = styled.div`
@@ -188,7 +189,6 @@ export const OfferFreight = styled.span`
 export const OfferDivOpen = styled.div`
   top: 0.5rem;
   right: 0.5rem;
-  margin-left: 1rem;
   display: flex;
   align-items: center;
 `;
