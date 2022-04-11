@@ -23,7 +23,7 @@ export default function Header(props: any) {
               <LogoKabum />
             </S.ALogo>
           </S.Logo>
-          <S.SearchDiv>
+          <S.SearchDiv theme={auth.email ? "margin-top: 1.7rem;" : ""}>
             <Search />
             {auth.email ? <AddressPrincipal /> : ""}
           </S.SearchDiv>

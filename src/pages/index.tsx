@@ -1,3 +1,4 @@
+import React from "react";
 import axios from "axios";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
@@ -5,13 +6,11 @@ import { useEffect, useState } from "react";
 import Body from "../components/Body";
 import Header from "../components/Header";
 import { AuthProvider } from "../context/AuthProvider";
-import { useAuth } from "../hooks/useAuth";
 
 const Home: NextPage = ({ children }) => {
   const [offers, setOffers] = useState([]);
   const [favorite, setFavorite] = useState([] as any);
   const [cart, setCart] = useState([]);
-  const auth = useAuth();
   const router = useRouter();
 
   useEffect(() => {
@@ -40,9 +39,8 @@ const Home: NextPage = ({ children }) => {
   };
 
   useEffect(() => {
-    const cartLS = JSON.parse(sessionStorage.getItem("cart") || "{}");
-    const favoriteLS = JSON.parse(sessionStorage.getItem("favorite") || "{}");
-
+    const cartLS = JSON.parse(sessionStorage.getItem("cart") || "[]");
+    const favoriteLS = JSON.parse(sessionStorage.getItem("favorite") || "[]");
     setCart(cartLS);
     setFavorite(favoriteLS);
   }, []);

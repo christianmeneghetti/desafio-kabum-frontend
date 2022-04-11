@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { IconLogged } from "../../../assets/images/IconLogged";
 import { IconUser } from "../../../assets/images/IconUser";
@@ -6,9 +7,11 @@ import * as S from "./styled";
 
 export default function UserInfo() {
   const auth = useAuth();
+  const router = useRouter();
 
   const onLogout = () => {
     auth.logout();
+    router.reload();
   };
 
   return (
