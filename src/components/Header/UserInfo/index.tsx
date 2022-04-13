@@ -5,14 +5,9 @@ import { IconUser } from "../../../assets/images/IconUser";
 import { useAuth } from "../../../hooks/useAuth";
 import * as S from "./styled";
 
-export default function UserInfo() {
+export default function UserInfo(props: any) {
+  const { onLogout } = props;
   const auth = useAuth();
-  const router = useRouter();
-
-  const onLogout = () => {
-    auth.logout();
-    router.reload();
-  };
 
   return (
     <S.UserInfo>

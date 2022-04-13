@@ -8,16 +8,42 @@ import AddressPrincipal from "./AddressPrincipal";
 import { useAuth } from "../../hooks/useAuth";
 import HamburguerMenu from "./HamburguerMenu";
 import ExpansiveMenu from "./ExpansiveMenu";
+import { useRouter } from "next/router";
 
 export default function Header(props: any) {
-  const { favoriteCount } = props;
-  const { cartCount } = props;
+  const { ...shipments } = props;
+  const { ...departaments } = props;
+  const {
+    shipping,
+    hamburguer,
+    address,
+    toggleAddres,
+    toggleHamburguer,
+    onSelectShipping,
+    favoriteCount,
+    cartCount,
+  } = props;
+
   const auth = useAuth();
+  const router = useRouter();
+  const onLogout = () => {
+    auth.logout();
+    router.reload();
+  };
+
   return (
     <S.Main>
       <S.Header>
         <S.StyledHeader>
-          {auth.email ? <HamburguerMenu /> : ""}
+          {auth.email ? (
+            <HamburguerMenu
+              onLogout={onLogout}
+              hamburguer={hamburguer}
+              toggleHamburguer={toggleHamburguer}
+            />
+          ) : (
+            ""
+          )}
           <S.Logo>
             <S.ALogo href="/">
               <LogoKabum />
@@ -25,13 +51,23 @@ export default function Header(props: any) {
           </S.Logo>
           <S.SearchDiv theme={auth.email ? "margin-top: 1.7rem;" : ""}>
             <Search />
-            {auth.email ? <AddressPrincipal /> : ""}
+            {auth.email ? (
+              <AddressPrincipal
+                address={address}
+                onSelectShipping={onSelectShipping}
+                shipping={shipping}
+                toggleAddres={toggleAddres}
+                shipments={shipments}
+              />
+            ) : (
+              ""
+            )}
           </S.SearchDiv>
-          <UserInfo />
+          <UserInfo onLogout={onLogout} />
           <AdditionalInfo favoriteCount={favoriteCount} cartCount={cartCount} />
         </S.StyledHeader>
       </S.Header>
-      {auth.email ? <ExpansiveMenu /> : ""}
+      {auth.email ? <ExpansiveMenu departaments={departaments} /> : ""}
     </S.Main>
   );
 }

@@ -60,5 +60,44 @@
       "freeFreight": false,
       "openbox": true
     }
+  ],
+  "departaments": [
+    { "id": "1", "category": "Hardware" },
+    { "id": "2", "category": "Periféricos" },
+    { "id": "3", "category": "Cadeiras" },
+    { "id": "4", "category": "Games" },
+    { "id": "5", "category": "Computadores" },
+    { "id": "6", "category": "Celular & Smartphone" },
+    { "id": "7", "category": "TV" },
+    { "id": "8", "category": "Benefício" },
+    { "id": "9", "category": "Segurança" },
+    { "id": "10", "category": "Câmeras Digitais" },
+    { "id": "11", "category": "Telefonia Fixa" },
+    { "id": "12", "category": "Tablets, iPads e E-readers" },
+    { "id": "13", "category": "Serviços Digitais" },
+    { "id": "14", "category": "Eletrodomésticos" },
+    { "id": "15", "category": "Instrumento Musical" },
+    { "id": "16", "category": "Áudio" },
+    { "id": "17", "category": "Automotivo" },
+    { "id": "18", "category": "Conectividade" },
+    { "id": "19", "category": "Projetores" },
+    { "id": "20", "category": "Smart Home" },
+    { "id": "21", "category": "Geek" },
+    { "id": "22", "category": "Brinquedos" },
+    { "id": "23", "category": "Cuidados Pessoais" }
+  ],
+  "shipments": [
+    {
+      "id": "1",
+      "address": "Rua das Hortências, 295 - Boa Vista - Limeira SP"
+    },
+    {
+      "id": "2",
+      "address": "Rua Visconde das laranjeiras, 526 - Centro - Araras SP"
+    },
+    {
+      "id": "3",
+      "address": "Rua Sargento Cabrini, 213 - Jd. Teresa - Araras SP"
+    }
   ]
 }

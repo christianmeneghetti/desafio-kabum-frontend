@@ -9,6 +9,11 @@ import { AuthProvider } from "../context/AuthProvider";
 
 const Home: NextPage = ({ children }) => {
   const [offers, setOffers] = useState([]);
+  const [shipments, setShipments] = useState([]);
+  const [departaments, setDeparments] = useState([]);
+  const [shipping, setShippingToggle] = useState(false);
+  const [hamburguer, setHamburguerToggle] = useState(false);
+  const [address, setAddress] = useState([]);
   const [favorite, setFavorite] = useState([] as any);
   const [cart, setCart] = useState([]);
   const router = useRouter();
@@ -16,6 +21,18 @@ const Home: NextPage = ({ children }) => {
   useEffect(() => {
     axios.get("http://localhost:5000/offers").then((response) => {
       setOffers(response.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    axios.get("http://localhost:5000/shipments").then((response) => {
+      setShipments(response.data);
+    });
+  }, []);
+
+  useEffect(() => {
+    axios.get("http://localhost:5000/departaments").then((response) => {
+      setDeparments(response.data);
     });
   }, []);
 
@@ -38,24 +55,53 @@ const Home: NextPage = ({ children }) => {
     });
   };
 
+  const onSelectShipping = (address: string) => {
+    setAddress((): any => {
+      return [address];
+    });
+    toggleAddres();
+  };
+
   useEffect(() => {
     const cartLS = JSON.parse(sessionStorage.getItem("cart") || "[]");
     const favoriteLS = JSON.parse(sessionStorage.getItem("favorite") || "[]");
+    const addressLS = JSON.parse(sessionStorage.getItem("address") || "[]");
     setCart(cartLS);
     setFavorite(favoriteLS);
+    setAddress(addressLS);
   }, []);
 
   useEffect(() => {
     sessionStorage.setItem("cart", JSON.stringify(cart));
     sessionStorage.setItem("favorite", JSON.stringify(favorite));
+    sessionStorage.setItem("address", JSON.stringify(address));
   });
+
+  function toggleAddres() {
+    setShippingToggle(!shipping);
+  }
+
+  function toggleHamburguer() {
+    setHamburguerToggle(!hamburguer);
+  }
 
   return (
     <AuthProvider>
       <>
-        <Header favoriteCount={favorite.length} cartCount={cart.length} />
+        <Header
+          departaments={departaments}
+          shipments={shipments}
+          hamburguer={hamburguer}
+          address={address}
+          onSelectShipping={onSelectShipping}
+          shipping={shipping}
+          toggleAddres={toggleAddres}
+          toggleHamburguer={toggleHamburguer}
+          favoriteCount={favorite.length}
+          cartCount={cart.length}
+        />
         <Body
-          ofertas={offers}
+          offers={offers}
           favorite={favorite}
           onAddFavorite={onAddFavorite}
           onAddCart={onAddCart}
