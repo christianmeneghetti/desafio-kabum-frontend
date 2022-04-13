@@ -11,7 +11,6 @@ import { TruckFill } from "../../../assets/images/TruckFill";
 import { OpenBox } from "../../../assets/images/OpenBox";
 import { IconCartWht } from "../../../assets/images/IconCartWht";
 import SwitcherFavorite from "../SwitcherFavorite";
-import { useAuth } from "../../../hooks/useAuth";
 
 function SampleNextArrow(props: { className: any; style: any; onClick: any }) {
   const { className, style, onClick } = props;
@@ -50,7 +49,6 @@ function SamplePrevArrow(props: { className: any; style: any; onClick: any }) {
 export default function Carousel(props: any) {
   const { offers } = props;
   const { favorite, onAddFavorite, onAddCart } = props;
-  const auth = useAuth();
 
   const settings = {
     dots: false,
@@ -109,7 +107,7 @@ export default function Carousel(props: any) {
   return (
     <>
       <Slider {...settings}>
-        {offers.ofertas.map((offer: any, index: any) => {
+        {offers.offers.map((offer: any, index: any) => {
           return (
             <S.Offer key={index}>
               <>

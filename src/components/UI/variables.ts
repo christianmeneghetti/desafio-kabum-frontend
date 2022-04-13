@@ -1,5 +1,6 @@
 export const clrPrimary = "#355EAE";
 export const clrWht = "#FFFFFF";
+export const clrBLK = "#000000";
 export const clrBackground = "#011E48";
 export const clrKabum = "#FF6500";
 export const clrKabumDark = "#FF5101";
@@ -7,6 +8,7 @@ export const clrKabumWht = "#FAFAFB";
 export const clrKabumRed = "#E32214";
 export const clrKabumError = "#E72626";
 export const clrKabumGray = "#42464D";
+export const clrKabumBlk = "#0E1116";
 export const clrManufactor = "#7F858D";
 export const clrOfferTxt = "#565C69";
 export const clrBannerBorder = "#F2F3F4";
