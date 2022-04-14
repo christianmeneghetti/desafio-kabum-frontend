@@ -7,13 +7,15 @@ import Body from "../components/Body";
 import Header from "../components/Header";
 import { AuthProvider } from "../context/AuthProvider";
 
-const Home: NextPage = ({ children }) => {
+const Home: NextPage = () => {
   const [offers, setOffers] = useState([]);
   const [shipments, setShipments] = useState([]);
   const [departaments, setDeparments] = useState([]);
   const [shipping, setShippingToggle] = useState(false);
   const [hamburguer, setHamburguerToggle] = useState(false);
-  const [address, setAddress] = useState([]);
+  const [address, setAddress] = useState([
+    "Selecione o seu endereço principal",
+  ]);
   const [favorite, setFavorite] = useState([] as any);
   const [cart, setCart] = useState([]);
   const router = useRouter();
@@ -65,10 +67,15 @@ const Home: NextPage = ({ children }) => {
   useEffect(() => {
     const cartLS = JSON.parse(sessionStorage.getItem("cart") || "[]");
     const favoriteLS = JSON.parse(sessionStorage.getItem("favorite") || "[]");
-    const addressLS = JSON.parse(sessionStorage.getItem("address") || "[]");
+
     setCart(cartLS);
     setFavorite(favoriteLS);
-    setAddress(addressLS);
+
+    if (sessionStorage.getItem("address") != null) {
+      const addressLS = JSON.parse(sessionStorage.getItem("address") || "{}");
+      console.log(addressLS);
+      setAddress(addressLS);
+    }
   }, []);
 
   useEffect(() => {
