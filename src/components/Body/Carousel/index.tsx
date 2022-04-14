@@ -54,7 +54,7 @@ export default function Carousel(props: any) {
     dots: false,
     infinite: true,
     slidesToShow: 5,
-    centerMode: false,
+    centerMode: true,
     slidesToScroll: 1,
     initialSlide: 0,
     nextArrow: (

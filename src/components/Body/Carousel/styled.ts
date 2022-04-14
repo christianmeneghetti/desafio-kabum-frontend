@@ -10,7 +10,7 @@ import {
 } from "../../UI/variables";
 
 export const Offer = styled.div`
-  margin: 2rem 1rem 1rem;
+  margin: 2rem 11.8rem 1rem;
   display: flex !important;
   width: 214px !important;
   outline: none;
@@ -21,7 +21,6 @@ export const OfferCard = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  -webkit-box-align: center;
   align-items: center;
   height: 25rem;
   background: ${clrWht};
@@ -36,7 +35,6 @@ export const OfferCard = styled.div`
 export const OfferCardTop = styled.div`
   position: relative;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
   width: 100%;
   padding: 0px 0.75rem;
@@ -75,9 +73,7 @@ export const OfferFavorite = styled.div`
 export const OfferFavoriteButton = styled.button`
   background: transparent;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
   margin-left: auto;
   cursor: pointer;
@@ -116,8 +112,6 @@ export const OfferTitle = styled.h2`
   margin-top: 0.5rem;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
   height: 3.375rem;
   color: ${clrKabumGray};
 `;
@@ -170,9 +164,7 @@ export const OfferDivFreight = styled.div`
 
 export const OfferTrcuk = styled.div`
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
   margin-left: auto;
 `;
@@ -195,9 +187,7 @@ export const OfferDivOpen = styled.div`
 
 export const OfferBox = styled.div`
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
   margin-left: auto;
 `;
@@ -219,9 +209,7 @@ export const OfferDivBuy = styled.div`
 `;
 
 export const OfferBuy = styled.div`
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
   height: 2.25rem;
   width: 100%;
@@ -233,9 +221,7 @@ export const OfferBuyButton = styled.button`
   line-height: 1.125rem;
   font-weight: 700;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
   width: 100%;
   height: 100%;
