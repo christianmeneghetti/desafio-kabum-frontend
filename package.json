@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run open-browser && next dev -p 3000",
+    "dev": "npm run open-browser && next dev -p 3000 && json-server",
+    "json-server": "json-server --watch db.json --port 5000",
     "open-browser": "start http://localhost:3000",
     "build": "next build",
-    "start": "next start",
+    "start": "concurrently \"json-server --watch db.json --port 5000\" \"npm run dev",
     "lint": "next lint"
   },
   "dependencies": {
