@@ -1,5 +1,5 @@
 import React from "react";
-import { LogoSearch } from "../../../assets/images/LogoSearch";
+import { LogoSearch } from "../../../assets/images/IconLogoSearch";
 import * as S from "./styled";
 
 export default function Search() {

@@ -2,7 +2,7 @@ import React from "react";
 import { IconIdentification } from "../../../assets/images/IconIdentification";
 import * as S from "./styled";
 
-export default function Top() {
+export default function Identification() {
   return (
     <S.DivTop>
       <IconIdentification />

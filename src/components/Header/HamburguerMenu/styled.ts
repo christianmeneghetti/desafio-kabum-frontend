@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import {
-  clrBLK,
+  clrBlk,
   clrKabum,
   clrKabumBlk,
   clrManufactor,
   clrWht,
-} from "../../UI/variables";
+} from "../../../UI/variables";
 
 export const HamburguerMenu = styled.nav`
   cursor: pointer;
@@ -53,7 +53,7 @@ export const Open = styled.div`
   left: 0px;
   top: 0px;
   position: fixed;
-  background-color: ${clrBLK};
+  background-color: ${clrBlk};
   mix-blend-mode: multiply;
   transition: opacity 1s ease 0s;
   opacity: 0.5;
@@ -61,32 +61,12 @@ export const Open = styled.div`
   z-index: 1000;
 `;
 
-export const Close = styled.button`
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  right: -2rem;
-  background-color: transparent;
-  width: 1.25rem;
-  height: 1.25rem;
-`;
-
-export const OutButton = styled.button`
-  width: 100%;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: 1px solid ${clrKabum};
-  background-color: ${clrKabum};
-  user-select: none;
-  color: ${clrWht};
-  font-size: 18px;
+export const Hello = styled.h4`
+  font-size: 1.25rem;
+  line-height: 1.875rem;
   font-weight: 700;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease 0s;
-  border-radius: 0.25rem;
+  color: ${clrWht};
+  margin-left: 1rem;
 `;
 
 export const Items = styled.ul`
@@ -117,10 +97,30 @@ export const ItemLink = styled.a`
   text-decoration: none;
 `;
 
-export const Hello = styled.h4`
-  font-size: 1.25rem;
-  line-height: 1.875rem;
-  font-weight: 700;
+export const Close = styled.button`
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: -2rem;
+  background-color: transparent;
+  width: 1.25rem;
+  height: 1.25rem;
+`;
+
+export const OutButton = styled.button`
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid ${clrKabum};
+  background-color: ${clrKabum};
+  user-select: none;
   color: ${clrWht};
-  margin-left: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease 0s;
+  border-radius: 0.25rem;
 `;

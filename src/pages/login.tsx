@@ -1,10 +1,10 @@
 import { NextPage } from "next";
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
-import Identification from "../components/Identification";
+import User from "../components/User";
 import { AuthProvider } from "../context/AuthProvider";
 
-const LoginPage: NextPage = ({ children }) => {
+const Login: NextPage = () => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
@@ -20,10 +20,10 @@ const LoginPage: NextPage = ({ children }) => {
     <AuthProvider>
       <>
         <Header cartCount={cart.length} />
-        <Identification />
+        <User />
       </>
     </AuthProvider>
   );
 };
 
-export default LoginPage;
+export default Login;

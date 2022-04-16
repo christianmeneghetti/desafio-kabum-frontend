@@ -1,9 +1,11 @@
 export const clrPrimary = "#355EAE";
 export const clrWht = "#FFFFFF";
-export const clrBLK = "#000000";
+export const clrBlk = "#000000";
+export const clrRed = "#FF0000";
 export const clrBackground = "#011E48";
 export const clrKabum = "#FF6500";
 export const clrKabumDark = "#FF5101";
+export const clrKabumEvnDark = "#803100";
 export const clrKabumWht = "#FAFAFB";
 export const clrKabumRed = "#E32214";
 export const clrKabumError = "#E72626";

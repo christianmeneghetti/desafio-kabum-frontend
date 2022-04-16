@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { clrKabumError } from "../../UI/variables";
+import { clrKabumError } from "../../../UI/variables";
 
 export const Contents = styled.div`
   display: flex;
@@ -11,7 +11,6 @@ export const Contents = styled.div`
 export const Sized = styled.div`
   display: flex;
   flex: 1 1 0%;
-  -webkit-box-pack: center;
   justify-content: center;
   padding: 0px 1rem;
 `;
@@ -19,7 +18,6 @@ export const Sized = styled.div`
 export const DivContents = styled.div`
   display: flex;
   flex: 1 1 0%;
-  -webkit-box-pack: center;
   justify-content: center;
   max-width: 63.125rem;
 `;

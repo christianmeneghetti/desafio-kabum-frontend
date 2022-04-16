@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import React from "react";
 import { IconLogged } from "../../../assets/images/IconLogged";
 import { IconUser } from "../../../assets/images/IconUser";
@@ -17,10 +16,10 @@ export default function UserInfo(props: any) {
           <S.User>
             <S.Span>
               Faça
-              <S.Login href="/LoginPage"> Login </S.Login>
+              <S.Login href="/login"> Login </S.Login>
               ou
               <br /> crie seu
-              <S.Register href="/LoginPage"> Cadastro </S.Register>
+              <S.Register href="/login"> Cadastro </S.Register>
             </S.Span>
           </S.User>
         </>

@@ -3,13 +3,12 @@ import Login from "./Login";
 import Register from "./Register";
 import * as S from "./styled";
 
-export default function Content(props: any) {
-  const { onLogin } = props;
+export default function Content() {
   return (
     <S.Contents>
       <S.Sized>
         <S.DivContents>
-          <Login onLogin={onLogin} />
+          <Login />
           <S.Division />
           <Register />
         </S.DivContents>

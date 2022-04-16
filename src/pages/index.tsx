@@ -39,8 +39,8 @@ const Home: NextPage = () => {
   }, []);
 
   const onAddFavorite = (id: string) => {
-    if (localStorage.getItem("u") === "null") {
-      router.push("/LoginPage");
+    if (localStorage.getItem("u") === "null" || !localStorage.getItem("u")) {
+      router.push("/login");
     } else {
       setFavorite((previousFav: string[]): any => {
         if (previousFav.includes(id)) {
@@ -73,7 +73,6 @@ const Home: NextPage = () => {
 
     if (sessionStorage.getItem("address") != null) {
       const addressLS = JSON.parse(sessionStorage.getItem("address") || "{}");
-      console.log(addressLS);
       setAddress(addressLS);
     }
   }, []);

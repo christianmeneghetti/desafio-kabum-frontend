@@ -4,7 +4,7 @@ import {
   clrManufactor,
   clrOfferTxt,
   clrWht,
-} from "../../../UI/variables";
+} from "../../../../UI/variables";
 
 export const Register = styled.section`
   display: flex;
@@ -13,15 +13,6 @@ export const Register = styled.section`
 `;
 
 export const FormRegister = styled.form``;
-
-export const FormH2 = styled.h2`
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  color: ${clrKabum};
-  margin-bottom: 20px;
-`;
 
 export const DivRegister = styled.div`
   position: relative;
@@ -40,6 +31,24 @@ export const DivInp = styled.div`
 export const DivForm = styled.div`
   position: relative;
   border-color: ${clrManufactor};
+`;
+
+export const DivButton = styled.div`
+  position: relative;
+  margin-bottom: 16px;
+`;
+
+export const DivSvg = styled.div`
+  margin-right: 10px;
+`;
+
+export const FormH2 = styled.h2`
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: ${clrKabum};
+  margin-bottom: 20px;
 `;
 
 export const Input = styled.input`
@@ -80,19 +89,12 @@ export const Label = styled.label`
   ${(props) => props.theme};
 `;
 
-export const DivButton = styled.div`
-  position: relative;
-  margin-bottom: 16px;
-`;
-
 export const Button = styled.button`
   cursor: pointer;
   width: 100%;
   height: 48px;
   display: flex;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   border: 1px solid ${clrKabum};
   background-color: ${clrWht};
@@ -103,8 +105,4 @@ export const Button = styled.button`
   text-transform: uppercase;
   transition: background-color 0.3s ease 0s;
   border-radius: 0.25rem;
-`;
-
-export const DivSvg = styled.div`
-  margin-right: 10px;
 `;

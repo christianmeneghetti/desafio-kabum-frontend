@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from "./styled";
-import { BannerImg } from "../../../assets/images/BannerImg";
 
 export default function Banner() {
   return (

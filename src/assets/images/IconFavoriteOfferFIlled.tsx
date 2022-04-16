@@ -1,4 +1,4 @@
-import { clrKabum } from "../../components/UI/variables";
+import { clrKabum } from "../../UI/variables";
 
 export const IconFavoriteOfferFilled = () => {
   return (

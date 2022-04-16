@@ -4,10 +4,6 @@ export const ArrowDown = () => {
       width="13"
       height="12"
       viewBox="0 0 13 8"
-      style={{
-        transform: "rotate(0deg)",
-        transition: "transform 300ms ease 0s",
-      }}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

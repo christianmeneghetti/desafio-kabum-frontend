@@ -1,8 +1,7 @@
 import React from "react";
-import { LogoUnion } from "../../../assets/images/LogoUnion";
 import * as S from "./styled";
 
-export default function ContentBot() {
+export default function LowerBanners() {
   return (
     <S.BannerDiv>
       <S.BannerBot>
