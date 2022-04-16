@@ -1,8 +1,8 @@
 import React from "react";
 import Banner from "./Banner";
-import ContentBot from "./ContentBot";
-import ContentTop from "./ContentTop";
-import ContentMid from "./ContetMid";
+import LowerBanners from "./LowerBanners";
+import Campaign from "./Campaign";
+import Showcase from "./Showcase";
 import * as S from "./styled";
 
 export default function Body(props: any) {
@@ -15,14 +15,14 @@ export default function Body(props: any) {
         <Banner />
         <S.ArticleContent>
           <S.SectionContent>
-            <ContentTop />
-            <ContentMid
+            <Campaign />
+            <Showcase
               offers={offers}
               favorite={favorite}
               onAddFavorite={onAddFavorite}
               onAddCart={onAddCart}
             />
-            <ContentBot />
+            <LowerBanners />
           </S.SectionContent>
         </S.ArticleContent>
       </S.StyledBody>

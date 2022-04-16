@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-key */
-import React, { Component, useState, useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ForwardArrow } from "../../../assets/images/ForwardArrow";
-import { BackArrow } from "../../../assets/images/BackArrow";
+import { ForwardArrow } from "../../../assets/images/IconForwardArrow";
+import { BackArrow } from "../../../assets/images/IconBackArrow";
 import * as S from "./styled";
-import { Rating } from "../../../assets/images/Rating";
-import { TruckFill } from "../../../assets/images/TruckFill";
-import { OpenBox } from "../../../assets/images/OpenBox";
+import { Rating } from "../../../assets/images/IconRating";
+import { TruckFill } from "../../../assets/images/IconTruckFill";
+import { OpenBox } from "../../../assets/images/IconOpenBox";
 import { IconCartWht } from "../../../assets/images/IconCartWht";
 import SwitcherFavorite from "../SwitcherFavorite";
 
@@ -54,7 +54,7 @@ export default function Carousel(props: any) {
     dots: false,
     infinite: true,
     slidesToShow: 5,
-    centerMode: true,
+    centerMode: false,
     slidesToScroll: 1,
     initialSlide: 0,
     nextArrow: (

@@ -5,7 +5,7 @@ import {
   clrKabumWht,
   clrOfferTxt,
   clrWht,
-} from "../../UI/variables";
+} from "../../../UI/variables";
 
 export const DropDownMenu = styled.div`
   max-width: 786px;

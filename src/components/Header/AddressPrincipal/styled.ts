@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { clrKabumGray, clrKabumWht, clrWht } from "../../UI/variables";
+import { clrKabumGray, clrKabumWht, clrWht } from "../../../UI/variables";
 
 export const AdressPrincipal = styled.div`
   display: flex;
@@ -25,6 +25,24 @@ export const AddressOpt = styled.div`
   max-height: 10.5rem;
   overflow: auto;
   z-index: 9999;
+`;
+
+export const ArrowDown = styled.div`
+  display: inline-flex;
+  ${(props) => props.theme};
+`;
+
+export const Open = styled.div`
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  mix-blend-mode: multiply;
+  transition: opacity 1s ease 0s;
+  opacity: 0.5;
+  overflow-y: hidden;
+  z-index: -1;
 `;
 
 export const Shipping = styled.label`

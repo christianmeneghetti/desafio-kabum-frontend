@@ -4,7 +4,7 @@ import {
   clrBoxShadow,
   clrOfferTxt,
   clrWht,
-} from "../../UI/variables";
+} from "../../../UI/variables";
 
 export const BannerDiv = styled.div`
   margin-top: 32px;
@@ -12,7 +12,6 @@ export const BannerDiv = styled.div`
   padding: 32px 64px;
   width: 100%;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
   background: ${clrWht};
 `;

@@ -1,10 +1,9 @@
 import React from "react";
 import Countdown from "react-countdown";
-import { deflateSync } from "zlib";
-import { LogoUnion } from "../../../assets/images/LogoUnion";
+import { LogoUnion } from "../../../assets/images/IconLogoUnion";
 import * as S from "./styled";
 
-export default function ContentTop() {
+export default function Campaign() {
   const renderer = ({ days, hours, minutes, seconds }: any) => {
     return (
       <span>

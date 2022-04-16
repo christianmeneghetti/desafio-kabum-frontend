@@ -1,5 +1,10 @@
 import styled from "styled-components";
-import { clrKabum, clrKabumDark, clrWht } from "../../UI/variables";
+import {
+  clrKabum,
+  clrKabumDark,
+  clrKabumEvnDark,
+  clrWht,
+} from "../../../UI/variables";
 
 export const ExpansiveMenu = styled.div`
   display: flex;
@@ -27,7 +32,7 @@ export const Departaments = styled.div`
   align-items: center;
   &:after {
     content: "";
-    background-color: rgb(255, 81, 1);
+    background-color: ${clrKabumDark};
     position: absolute;
     width: 100vw;
     height: 100%;
@@ -35,13 +40,23 @@ export const Departaments = styled.div`
   }
 `;
 
+export const ArrowDown = styled.div`
+  display: inline-flex;
+  ${(props) => props.theme};
+`;
+
 export const Items = styled.nav`
   max-width: 1216px;
   width: 100%;
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: flex-start;
   gap: 4rem;
+`;
+
+export const DepartamentsSpn = styled.span`
+  margin: 0px 25px 0px 0px;
+  font-size: 14px;
+  font-weight: 700;
 `;
 
 export const Item = styled.a`
@@ -55,18 +70,12 @@ export const Item = styled.a`
   cursor: pointer;
 `;
 
-export const DepartamentsSpn = styled.span`
-  margin: 0px 25px 0px 0px;
-  font-size: 14px;
-  font-weight: 700;
-`;
-
 export const DepartamentsBtn = styled.button`
   font-size: 14px;
   text-align: right;
   font-weight: 700;
   color: ${clrWht};
-  background-color: transparent;
+  ${(props) => props.theme};
   position: relative;
   cursor: pointer;
   border: none;

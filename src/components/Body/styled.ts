@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { clrBackground, clrKabumWht } from "../UI/variables";
+import { clrBackground, clrKabumWht } from "../../UI/variables";
 
 export const MainBody = styled.main`
   display: flex;
@@ -15,9 +15,7 @@ export const StyledBody = styled.div`
   flex: 1 1 0%;
   flex-direction: column;
   max-width: 1440px;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
   overflow-x: hidden;
 

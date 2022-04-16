@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { IconEnter } from "../../../../assets/images/IconEnter";
 import { useAuth } from "../../../../hooks/useAuth";
 import * as S from "./styled";
-import * as SS from "./../styled";
+import * as SS from "../styled";
 import { useRouter } from "next/router";
-import { Error } from "../../../../assets/images/Error";
+import { Error } from "../../../../assets/images/IconError";
+import { clrRed } from "../../../../UI/variables";
 
-export default function Login(props: any) {
+export default function Login() {
   const [errorP, setErrorP] = useState("");
   const router = useRouter();
   const [{ email, password }, setCredentials] = useState({
@@ -22,10 +23,11 @@ export default function Login(props: any) {
       await auth.authenticate(email, password);
       router.push("/");
     } catch (error) {
-      console.log(error);
       setErrorP("Senha ou usuário invalido.");
     }
   };
+
+  const clr = clrRed;
 
   return (
     <S.Login>
@@ -36,7 +38,7 @@ export default function Login(props: any) {
             <S.DivInp>
               <S.DivForm>
                 <S.Input
-                  theme={errorP ? "border-color: red;" : ""}
+                  theme={errorP ? "border-color:" + clr : ""}
                   type="text"
                   id="inputUserEmail"
                   value={email}
@@ -48,7 +50,7 @@ export default function Login(props: any) {
                   }
                 ></S.Input>
                 <S.Label
-                  theme={errorP ? "color: red;" : ""}
+                  theme={errorP ? "color:" + clr : ""}
                   htmlFor="inputUserEmail"
                 >
                   E-mail
@@ -60,7 +62,7 @@ export default function Login(props: any) {
             <S.DivInp>
               <S.DivForm>
                 <S.Input
-                  theme={errorP ? "border-color: red;" : ""}
+                  theme={errorP ? "border-color: " + clr : ""}
                   type="password"
                   id="inputUserPassword"
                   value={password}
@@ -72,7 +74,7 @@ export default function Login(props: any) {
                   }
                 ></S.Input>
                 <S.Label
-                  theme={errorP ? "color: red;" : ""}
+                  theme={errorP ? "color: " + clr : ""}
                   htmlFor="inputUserPassword"
                 >
                   Senha

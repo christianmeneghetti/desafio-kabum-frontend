@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./styled";
-import { LogoKabum } from "../../assets/images/LogoKabum";
+import { LogoKabum } from "../../assets/images/IconLogoKabum";
 import Search from "./Search";
 import UserInfo from "./UserInfo";
 import AdditionalInfo from "./AdditionalInfo";

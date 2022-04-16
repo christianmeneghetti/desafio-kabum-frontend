@@ -1,18 +1,11 @@
 import styled from "styled-components";
-import { clrPrimary } from "../UI/variables";
+import { clrPrimary } from "../../UI/variables";
 
 export const Main = styled.header`
   display: flex;
   align-items: center;
   position: relative;
   flex-direction: column;
-`;
-
-export const Header = styled.div`
-  position: relative;
-  width: 100%;
-  padding: 0 1.5rem;
-  background-color: ${clrPrimary};
 `;
 
 export const StyledHeader = styled.nav`
@@ -28,13 +21,15 @@ export const StyledHeader = styled.nav`
   }
 `;
 
-export const Logo = styled.div`
-  display: flex;
+export const Header = styled.div`
+  position: relative;
+  width: 100%;
+  padding: 0 1.5rem;
+  background-color: ${clrPrimary};
 `;
 
-export const ALogo = styled.a`
-  height: 3.375rem;
-  cursor: pointer;
+export const Logo = styled.div`
+  display: flex;
 `;
 
 export const SearchDiv = styled.div`
@@ -47,4 +42,9 @@ export const SearchDiv = styled.div`
   @media (max-width: 1280px) {
     width: 40vw;
   }
+`;
+
+export const ALogo = styled.a`
+  height: 3.375rem;
+  cursor: pointer;
 `;

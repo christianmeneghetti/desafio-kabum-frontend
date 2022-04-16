@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import { IconRegister } from "../../../../assets/images/IconRegister";
 import { useAuth } from "../../../../hooks/useAuth";
 import * as S from "./styled";
-import * as SS from "./../styled";
-import { Error } from "../../../../assets/images/Error";
+import * as SS from "../styled";
+import { Error } from "../../../../assets/images/IconError";
+import { clrRed } from "../../../../UI/variables";
 
 export default function Register() {
   const router = useRouter();
@@ -21,20 +22,19 @@ export default function Register() {
     event.preventDefault();
     if (password == "" || repeatPassword == "" || email == "") {
       setErrorP("Preencha todos os campos!");
-      console.log(email, password, repeatPassword);
     } else {
       if (password == repeatPassword) {
         try {
           await auth.register(email, password);
           router.push("/");
         } catch (error) {
-          console.log(error);
+          setErrorP("Senhas não conferem ou usuário não passivel de criação.");
         }
-      } else {
-        setErrorP("Senhas não conferem ou usuário não passivel de criação.");
       }
     }
   };
+
+  const clr = clrRed;
 
   return (
     <S.Register>
@@ -45,7 +45,7 @@ export default function Register() {
             <S.DivInp>
               <S.DivForm>
                 <S.Input
-                  theme={errorP ? "border-color: red;" : ""}
+                  theme={errorP ? "border-color: " + clr : ""}
                   type="text"
                   id="inputUserEmail"
                   value={email}
@@ -57,7 +57,7 @@ export default function Register() {
                     })
                   }
                 ></S.Input>
-                <S.Label theme={errorP ? "color: red;" : ""}>E-mail</S.Label>
+                <S.Label theme={errorP ? "color: " + clr : ""}>E-mail</S.Label>
               </S.DivForm>
             </S.DivInp>
           </S.DivCamp>
@@ -66,7 +66,7 @@ export default function Register() {
             <S.DivInp>
               <S.DivForm>
                 <S.Input
-                  theme={errorP ? "border-color: red;" : ""}
+                  theme={errorP ? "border-color:" + clr : ""}
                   type="password"
                   id="inputUserPassword"
                   value={password}
@@ -78,7 +78,7 @@ export default function Register() {
                     })
                   }
                 ></S.Input>
-                <S.Label theme={errorP ? "color: red;" : ""}>
+                <S.Label theme={errorP ? "color: " + clr : ""}>
                   Crie sua senha *
                 </S.Label>
               </S.DivForm>
@@ -89,7 +89,7 @@ export default function Register() {
             <S.DivInp>
               <S.DivForm>
                 <S.Input
-                  theme={errorP ? "border-color: red;" : ""}
+                  theme={errorP ? "border-color: " + clr : ""}
                   type="password"
                   id="inputUserRepeatPassword"
                   value={repeatPassword}
@@ -101,7 +101,7 @@ export default function Register() {
                     })
                   }
                 ></S.Input>
-                <S.Label theme={errorP ? "color: red;" : ""}>
+                <S.Label theme={errorP ? "color:" + clr : ""}>
                   Confirme sua senha *
                 </S.Label>
               </S.DivForm>

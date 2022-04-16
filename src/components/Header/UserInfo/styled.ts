@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { clrInfo, clrWht } from "../../UI/variables";
+import { clrInfo, clrWht } from "../../../UI/variables";
 
 export const UserInfo = styled.div`
   display: flex;

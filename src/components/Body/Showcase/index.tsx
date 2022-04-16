@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Carousel from "../Carousel";
 
-export default function ContentMid(props: any) {
+export default function Showcase(props: any) {
   const { offers } = props;
   const { favorite, onAddFavorite, onAddCart } = props;
 

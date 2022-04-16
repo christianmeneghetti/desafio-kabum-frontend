@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { clrKabumWht } from "../../UI/variables";
+import { clrKabumWht } from "../../../UI/variables";
 
 export const DivOffersBot = styled.div`
   padding: 0px 4rem 0px 4rem;
