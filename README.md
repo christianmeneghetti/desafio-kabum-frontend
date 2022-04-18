@@ -75,7 +75,7 @@
   👤 - george.edwards@reqres.in  <br>
   👤 - rachel.howell@reqres.in  <br>
   
-  PS: A senha não é um parametro pré cadastrado, podendo assumir qualquer valor que desejar.
+  PS: A senha não é um parametro pré cadastrado, podendo assumir o valor padrão de "cityslicka" ou qualquer valor que desejar.
   
 </div>
 
